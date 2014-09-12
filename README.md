@@ -1,0 +1,4 @@
+IConfig
+=======
+
+ini config class
