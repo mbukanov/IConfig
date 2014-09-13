@@ -1,12 +1,15 @@
 IConfig
 =======
+Simple ini config class
 
-ini config class
 
 Usage
-#include "IConfig.h"
+-----
 
-// ...
 
-std::string str = Config::Instance()->get("global", "email");
+    #include "IConfig.h"
+    
+    /* ... */
+    
+    std::string str = Config::Instance()->get("global", "email");
 
