@@ -7,7 +7,6 @@
 class IConfig
 {
 protected:
-	//std::map<std::string, std::string> settings;
 	std::map<std::string, std::map<std::string, std::string> > settings;
 
 	static IConfig* _self;
