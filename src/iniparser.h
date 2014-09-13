@@ -6,6 +6,7 @@
 #include <vector>
 #include <map>
 #include <fstream>
+#include <stdlib.h>
 #include <iterator>
 
     typedef std::pair<std::string, std::string> Entry;

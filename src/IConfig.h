@@ -1,25 +1,25 @@
-#ifndef	CONFIG_H
-#define	CONFIG_H
+#ifndef	ICONFIG_H
+#define	ICONFIG_H
 
 #include <set>
 #include "iniparser.h"
 
-class Config
+class IConfig
 {
 protected:
 	//std::map<std::string, std::string> settings;
 	std::map<std::string, std::map<std::string, std::string> > settings;
 
-	static Config* _self;
-	Config(){}
-	virtual ~Config(){}
+	static IConfig* _self;
+	IConfig(){}
+	virtual ~IConfig(){ IConfig::DeleteInstance(); }
 
 public:
-	static Config* Instance()
+	static IConfig* Instance()
 	{
 		if(!_self)
 		{
-			_self = new Config();
+			_self = new IConfig();
 			IniParser parser((char*)"config.ini");
 			_self->settings = parser.getAll();
 		}
@@ -43,7 +43,7 @@ public:
 	}
 };
 
-Config* Config::_self = 0;
+IConfig* IConfig::_self = 0;
 
 
 #endif
