@@ -1,6 +1,10 @@
 #ifndef INIPARSER_H
 #define INIPARSER_H
 
+/*
+    qeed
+*/
+
 #include <iostream>
 #include <list>
 #include <vector>
